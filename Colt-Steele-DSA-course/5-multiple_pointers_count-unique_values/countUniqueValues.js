@@ -11,7 +11,13 @@ function countUniqueValues(arr1) {
       count++;
     }
   }
-  return count;
+  if (count > 1) {
+    console.log("There are duplicates");
+    return true;
+  } else {
+    console.log("Ther are NO duplicates");
+    return false;
+  }
 }
 
 console.log(countUniqueValues([1, 1, 1, 1, 1, 2])); // 2
