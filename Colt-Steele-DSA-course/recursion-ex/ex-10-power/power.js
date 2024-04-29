@@ -8,7 +8,7 @@ function power(base, exponent) {
   if (exponent === 0) return 1;
   return base * power(base, exponent - 1);
 
-  // return base to the power of exponent
+  // return base times function
 }
 
 console.log(power(2, 0)); // 1
