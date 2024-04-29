@@ -3,19 +3,17 @@
 // recursiveRange(10) // 55
 
 function recursiveRange(num) {
-  let sum;
+  let sum = 0;
   function helper(helperInput) {
-    let innerSum = helperInput - 1;
-    sum += innerSum;
-    if (innerSum === 0) {
-      return;
+    sum += helperInput; // Add current number to sum
+    if (helperInput === 0) {
+      return sum; // Return when base case in reached
     }
 
-    return helper(innerSum);
+    return helper(helperInput - 1); // Continue recursion with next lowest number
   }
-  helper(num);
-  return sum;
+  return helper(num); // Start helper with initial number
 }
 
-console.log(recursiveRange(6));
-console.log(recursiveRange(10));
+console.log(recursiveRange(6)); // 21
+console.log(recursiveRange(10)); // 55
